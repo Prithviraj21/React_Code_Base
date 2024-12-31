@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile Card</title>
+    <style>
+        .profileCard{
+            box-shadow: 0 0 10px yellow;
+            width: 200px;
+            padding: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function PrfileCard () {
+           return(
+            <div class="profileCard">
+                <h2>User Name</h2>
+                <img src="https://www.profilebakery.com/wp-content/uploads/2024/05/before-and-after-examples-2.jpeg" width="100%" height="300" alt="image"/>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis incidunt atque voluptatem vitae nemo quis, fugit omnis unde iusto, ullam earum, impedit officia excepturi autem.</p>
+            </div>
+           );
+        }
+
+        function ProfileCardContainer() {
+           return (<div class="container">
+                <PrfileCard/>
+                <PrfileCard/>
+                <PrfileCard/>
+            </div>);
+            
+            
+        }
+        ReactDOM.render(<ProfileCardContainer/>, document.getElementById("root"));
+    </script>
+  </body>
+</html>
